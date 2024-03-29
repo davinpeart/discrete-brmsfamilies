@@ -48,6 +48,7 @@ zero_inflated_skellam <- function(
       s <- get_dpar(prep, "s", i = i)
       zi <- get_dpar(prep, "zi", i = i)
       y <- prep$data$Y[i]
+      n <- prep$ndraws
       log_dskellamzi_loo(y, mu, s, zi, n)
     },
     posterior_predict = function(i, prep, ...) {
